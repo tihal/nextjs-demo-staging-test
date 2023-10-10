@@ -25,7 +25,7 @@ jobs:
         id: stark
         uses: stark-contrast/accessibility-check-action@abhiraj/strk-512-iteration-1-action-parse-multiple-urls-from-the-config-and
         env:
-          STARK_REPORT_URL: https://ty.ngrok.io/api/cli-webhooks/scan-report/:scanId
+          STARK_REPORT_URL: https://ty.ngrok.io/api/cli-webhooks/scan-result/:scanId
           STARK_COMPLETION_URL: https://ty.ngrok.io/api/cli-webhooks/end-scan/:scanId
         with:
           # Most of the following values are simply shell commands. You can use these to set up the container as needed for your app
@@ -36,4 +36,6 @@ jobs:
           serve: "npm run start" # [Optional] Tell us how to serve your app.
           cleanup:
           wait_time: 5000 # [Required, default 5000] Milliseconds to wait before your app can start serving
-          url: https://www.getstark.co
+          urls: |-
+            https://www.getstark.co
+            https://www.getstark.co/about
