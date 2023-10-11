@@ -25,8 +25,8 @@ jobs:
         id: stark
         uses: stark-contrast/accessibility-check-action@abhiraj/strk-512-iteration-1-action-parse-multiple-urls-from-the-config-and
         env:
-          STARK_REPORT_URL: https://ty.ngrok.io/api/cli-webhooks/scan-result/:scanId
-          STARK_COMPLETION_URL: https://ty.ngrok.io/api/cli-webhooks/end-scan/:scanId
+          STARK_REPORT_URL: https://house-stark-staging.herokuapp.com/api/cli-webhooks/scan-result/:scanId
+          STARK_COMPLETION_URL: https://house-stark-staging.herokuapp.com/api/cli-webhooks/end-scan/:scanId
         with:
           # Most of the following values are simply shell commands. You can use these to set up the container as needed for your app
           token: ${{ github.event.inputs.token }} # The action will use this to send an audit report back to Stark.
