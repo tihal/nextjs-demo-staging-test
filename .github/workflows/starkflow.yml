@@ -38,5 +38,5 @@ jobs:
           wait_time: 5000 # [Required, default 5000] Milliseconds to wait before your app can start serving
           urls: |-
             https://www.getstark.co
-            https://www.getstark.co/blog/
+            https://www.getstark.co/enterprise/
             https://www.getstark.co/library/
